@@ -8,7 +8,7 @@ RUN npm install and npm-install-peers
 RUN cd /app
 
 FROM nginx:1.16.0-alpine
-COPY  dist/  /usr/share/nginx/html
+COPY  dist/angular-crud   /usr/share/nginx/html
 #COPY nginx/nginx.conf /etc/nginx/conf.d
 
 EXPOSE 80
