@@ -4,6 +4,6 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/angular-gaurav/angular:$SHORT_SHA']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'angular', '--region=us-central1', '--platform=managed', '--port=80',  '--image=gcr.io/angular-gaurav/angular:ecde0fd:$SHORT_SHA']
+  args: ['beta', 'run', 'deploy', 'angular', '--region=us-central1', '--platform=managed', '--port=80',  '--image=gcr.io/angular-gaurav/angular:$SHORT_SHA']
   
  
