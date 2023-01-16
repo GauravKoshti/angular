@@ -1,0 +1,6 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/angular-gaurav/angular:$SHORT_SHA', '.']
+  steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/angular-gaurav/angular:$SHORT_SHA']
