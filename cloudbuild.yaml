@@ -6,14 +6,16 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['beta', 'run', 'deploy', 'testabc', '--region=us-central1', '--platform=managed', '--port=80',  '--image=gcr.io/angular-gaurav/angular:$SHORT_SHA']
   
-- name: 'gcr.io/cloud-builders/gkedeploy'
-  args: 
-  - run 
-  - --filename:deployment.yaml
+##- name: 'gcr.io/cloud-builders/gkedeploy'
+  ##args: 
+ ## - run 
+  ##- --filename:deployment.yaml
   ##- --image:$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$SHORT_SH
-  - --location=us-central1
-  - --cluster=test-cluster-1
+  ##- --location=us-central1
+  ##- --cluster=test-cluster-1
   
+  - name: "gcr.io/cloud-builders/gke-deploy"
+    args: ['run', '--filename=deployment.yaml', '--location=us-central1', '--cluster=test-cluster-1']
   
   
  
