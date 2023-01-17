@@ -10,7 +10,7 @@ steps:
   args: 
   - run 
   - --filename:deployment.yaml
-  --image:$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$SHORT_SH
+  - -image:$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$SHORT_SH
   - --location=us-central1
   - --cluster=test-cluster-1
   
