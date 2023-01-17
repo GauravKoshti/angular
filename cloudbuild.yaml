@@ -10,7 +10,7 @@ steps:
   args: 
   - run 
   - --filename:deployment.yaml
-  - --image:gcr.io/$PROJECT_ID/angular-crud
+  ###- --image:gcr.io/$PROJECT_ID/angular-crud
   - --location=us-central1
   - --cluster=test-cluster-1
   
