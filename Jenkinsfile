@@ -11,7 +11,7 @@ pipeline {
 
         stage('try') {
           steps {
-            sh 'kugukg'
+            sh 'pwd'
           }
         }
 
