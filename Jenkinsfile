@@ -2,8 +2,19 @@ pipeline {
   agent any
   stages {
     stage('build') {
-      steps {
-        sh 'date'
+      parallel {
+        stage('build') {
+          steps {
+            sh 'date'
+          }
+        }
+
+        stage('try') {
+          steps {
+            sh 'kugukg'
+          }
+        }
+
       }
     }
 
